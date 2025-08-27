@@ -1,4 +1,5 @@
 import java.sql.SQLOutput;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MyException {
@@ -11,6 +12,12 @@ public class MyException {
             z=x/y;
             System.out.println("Exception not occur");
         } catch(ArithmeticException e){
+            System.out.println(e.getMessage());
+        }
+        catch (InputMismatchException e) {
+            System.out.println(e);
+        }
+        catch (Exception e){
             System.out.println(e.getMessage());
         }
         finally {
